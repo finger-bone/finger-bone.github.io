@@ -20,23 +20,21 @@ jobs:
           # "Last updated time" and other git log-related information require fetching all commit records.
           fetch-depth: 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: oven-sh/setup-bun@v2
         with:
-          # 选择要使用的 node 版本
-          node-version: 20
+          bun-version: latest
 
       # 安装依赖
       # Install dependencies
       - name: Install Dependencies
-        run: npm ci
+        run: bun i
 
 
 
       # 运行构建脚本
       # Run the build script
       - name: Build VuePress site
-        run: npm run docs:build
+        run: bun run docs:build
 
 
       # 查看 workflow 的文档来获取更多信息
