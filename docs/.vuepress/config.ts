@@ -2,6 +2,7 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import { defineUserConfig } from 'vuepress'
 import { plumeTheme } from 'vuepress-theme-plume'
 import { umamiAnalyticsPlugin } from '@vuepress/plugin-umami-analytics'
+import { markdownHintPlugin } from '@vuepress/plugin-markdown-hint'
 
 export default defineUserConfig({
   base: '/',
@@ -190,6 +191,12 @@ export default defineUserConfig({
     umamiAnalyticsPlugin({
       id: '33337ddf-1b11-4c6f-8a29-fb983c3639ab',
       link: "https://cloud.umami.is/script.js"
-    })
+    }),
+    markdownHintPlugin({
+      // 启用提示容器，默认启用
+      hint: true,
+      // 启用 GFM 警告
+      alert: true,
+    }),
   ]
 })
