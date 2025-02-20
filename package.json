@@ -23,5 +23,14 @@
     "vue": "^3.5.13",
     "sass-embedded": "^1.85.0",
     "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@vuepress/plugin-markdown-image": "^2.0.0-rc.78",
+    "@vuepress/plugin-markdown-include": "^2.0.0-rc.78",
+    "@vuepress/plugin-markdown-math": "^2.0.0-rc.78",
+    "@vuepress/plugin-umami-analytics": "^2.0.0-rc.78",
+    "katex": "^0.16.21",
+    "vuepress-plugin-md-enhance": "^2.0.0-rc.71",
+    "vuepress-plugin-md-power": "^1.0.0-rc.131"
   }
 }
